@@ -1,44 +1,22 @@
-
 # Car Rental System
 
-A simple prototype of a **Car Rental System** web application designed for user management and responsiveness.
+This is a Spring Boot-based Car Rental System project. It provides RESTful APIs for managing cars and rentals.
 
 ## Features
 
-- **User Management**: Login, Registration, and Profile pages.
-- **Responsive Design**: Uses Bootstrap and custom CSS for a mobile-friendly layout.
-- **Form Validation**: JavaScript-powered validation for form fields with interactive feedback.
-- **Modular Code**: Organized file structure for ease of maintenance and readability.
-
-## Project Structure
-
-```
-car-rental-system/
-├── css/
-│   └── styles.css
-├── js/
-│   └── scripts.js
-├── images/ (optional, for UI enhancements)
-├── index.html
-├── login.html
-├── register.html
-├── profile.html
-└── README.md
-```
-
-## How to Run
-
-1. Clone or download the project.
-2. Open the `index.html` file in your web browser.
-3. Navigate to other pages (Login, Register, Profile) using the navbar.
+- CRUD operations for cars and rentals
+- Validation for input data
+- Exception handling
+- Unit tests for service layer
 
 ## Technologies Used
 
-- HTML5
-- CSS3
-- JavaScript (for interactivity and validation)
-- Bootstrap (for responsive design)
+- Java 17
+- Spring Boot 3.x
+- Spring Data JPA
+- H2 Database
+- JUnit 5
+- Mockito
 
-## Author
 
-This project is a template for learning and demonstration purposes. It can be extended further for real-world use cases.
+

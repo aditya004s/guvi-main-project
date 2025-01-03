@@ -1,31 +1,32 @@
+package com.example.carrentalsystem.model;
 
-package models;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Positive;
 
-import java.math.BigDecimal;
-
+@Entity
 public class Car {
-    private int carId;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @NotBlank(message = "Make is required")
     private String make;
+
+    @NotBlank(message = "Model is required")
     private String model;
+
+    @Positive(message = "Year must be positive")
     private int year;
-    private BigDecimal dailyRate;
-    private boolean available;
 
-    public Car(int carId, String make, String model, int year, BigDecimal dailyRate, boolean available) {
-        this.carId = carId;
-        this.make = make;
-        this.model = model;
-        this.year = year;
-        this.dailyRate = dailyRate;
-        this.available = available;
-    }
+    @Positive(message = "Daily rate must be positive")
+    private double dailyRate;
 
-    public int getCarId() { return carId; }
-    public String getMake() { return make; }
-    public String getModel() { return model; }
-    public int getYear() { return year; }
-    public BigDecimal getDailyRate() { return dailyRate; }
-    public boolean isAvailable() { return available; }
-
-    public void setAvailable(boolean available) { this.available = available; }
+    // Getters and setters
+    // ...
 }
+
